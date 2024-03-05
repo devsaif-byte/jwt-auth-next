@@ -22,7 +22,7 @@ export default function LoginPage() {
 				body: JSON.stringify(user),
 			});
 			const data = await response.json();
-			console.log(response);
+			console.log(data);
 
 			// Check for errors
 			if (!response.ok) {

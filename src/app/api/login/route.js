@@ -39,14 +39,14 @@ export async function POST(request) {
 		}
 
 		// Check if there is already a token
-		const existingToken = request.cookies["_parsed"].get("secureJWT");
-		// console.log(existingToken.name === "secureJWT");
-		if (existingToken.name === "secureJWT") {
-			return NextResponse.json(
-				{ message: "User already logged in" },
-				{ status: 409 }
-			);
-		}
+		// const existingToken = request.cookies["_parsed"].get("secureJWT");
+		// // console.log(existingToken.name === "secureJWT");
+		// if (existingToken.name === "secureJWT") {
+		// 	return NextResponse.json(
+		// 		{ message: "User already logged in" },
+		// 		{ status: 409 }
+		// 	);
+		// }
 
 		// jwt secret
 		const secret = "mySecret";
